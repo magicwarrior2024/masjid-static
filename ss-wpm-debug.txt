@@ -1,0 +1,5 @@
+Start Copy: 2026-02-07 05:17:30
+Destination: C:\xampp\htdocs\mosque\html\
+Theme Dir: C:\xampp\htdocs\mosque/wp-content/themes/wp-masjid
+Font Source Found: C:\xampp\htdocs\mosque/wp-content/themes/wp-masjid/font
+Copy 1 Success to C:\xampp\htdocs\mosque\html/wp-content/themes/wp-masjid/font/
