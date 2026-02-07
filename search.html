@@ -68,6 +68,32 @@ a, .det__title, .sing__nav a { color: #222222; }
             .ss-result-card { flex-direction: column; }
             .ss-result-thumb { width: 100%; height: 160px; }
         }
+        
+        /* Prayer Time Names - CSS Pseudo-elements */
+        .khalifah .MPtimetable tr:nth-child(2) td:nth-child(1):before,
+        .wm__sholat .MPtimetable tr:nth-child(2) td:nth-child(1):before {
+            content: "Subuh";
+        }
+        .khalifah .MPtimetable tr:nth-child(3) td:nth-child(1):before,
+        .wm__sholat .MPtimetable tr:nth-child(3) td:nth-child(1):before {
+            content: "Terbit";
+        }
+        .khalifah .MPtimetable tr:nth-child(4) td:nth-child(1):before,
+        .wm__sholat .MPtimetable tr:nth-child(4) td:nth-child(1):before {
+            content: "Dzuhur";
+        }
+        .khalifah .MPtimetable tr:nth-child(5) td:nth-child(1):before,
+        .wm__sholat .MPtimetable tr:nth-child(5) td:nth-child(1):before {
+            content: "Ashar";
+        }
+        .khalifah .MPtimetable tr:nth-child(6) td:nth-child(1):before,
+        .wm__sholat .MPtimetable tr:nth-child(6) td:nth-child(1):before {
+            content: "Maghrib";
+        }
+        .khalifah .MPtimetable tr:nth-child(7) td:nth-child(1):before,
+        .wm__sholat .MPtimetable tr:nth-child(7) td:nth-child(1):before {
+            content: "Isya";
+        }
     </style>
 <style>
 body, .wm__looppost, .pagination a, #bigslider .owl-theme .owl-dots, .ka__sholattime, .ka__address:before, .ka__address:after, .kajum__block, .shalat__name, .saldo__real span, .kali__book { background: ##ffffff; }
@@ -124,8 +150,7 @@ a, .det__title, .sing__nav a { color: #222222; }
                         <ul id="kal_accord" class="accord">
 <li class="menu-item"><a href="./index.html">Home</a></li>
 <li class="menu-item"><a href="./infaq/index.html">Infaq</a></li>
-<li class="menu-item"><a href="./event/index.html">Event</a></li>
-<li class="menu-item"><a href="./masjid/index.html">Masjid</a></li>
+<li class="menu-item"><a href="./event/index.html">Agenda</a></li>
 <li class="menu-item"><a href="./full-width-page/index.html">Full Width Page</a></li>
 <li class="menu-item"><a href="./page-sidebar/index.html">Sidebar</a></li>
 <li class="menu-item"><a href="./blog/index.html">Blog</a></li>
@@ -174,9 +199,14 @@ a, .det__title, .sing__nav a { color: #222222; }
             </div>
             
             <!-- Footer -->
+            <div class="fo__contact div__clear">
+                <div class="ka__masdata">
+                    <div class="hidden_info"></div>
+                </div>
+            </div>
             <div class="ka__footer">
                 <div class="copyright">
-                    &copy; 2026 Mosque
+                    MasjidStatic Supported by <a href="https://ciuss.com/">Ciuss Creative</a>
                 </div>
                 <div class="wm__social"></div>
             </div>
