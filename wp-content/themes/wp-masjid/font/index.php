@@ -1,2 +1,0 @@
-<?php
-// just blank file
