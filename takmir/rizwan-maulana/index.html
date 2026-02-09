@@ -274,7 +274,7 @@ html :where(.is-position-sticky){
 
 /*# sourceURL=/wp-includes/css/classic-themes.css */
 </style>
-<link rel="stylesheet" id="wm-style-css" href="./../../wp-content/themes/wp-masjid/style.css?ver=202629" type="text/css" media="all">
+<link rel="stylesheet" id="wm-style-css" href="./../../wp-content/themes/wp-masjid/style.css?ver=072300" type="text/css" media="all">
 <style id="wm-style-inline-css" type="text/css">
 	
 	body,
@@ -1008,12 +1008,12 @@ html :where(.is-position-sticky){
 	
 /*# sourceURL=wm-style-inline-css */
 </style>
-<link rel="stylesheet" id="wm-mode-css" href="./../../wp-content/themes/wp-masjid/khalifah/style.css?ver=202629" type="text/css" media="all">
-<link rel="stylesheet" id="wm-owl-css" href="./../../wp-content/themes/wp-masjid/wm-css/owl.carousel.min.css?ver=202629" type="text/css" media="all">
-<link rel="stylesheet" id="wm-ani-css" href="./../../wp-content/themes/wp-masjid/wm-css/owl.animate.css?ver=202629" type="text/css" media="all">
-<link rel="stylesheet" id="wm-theme-css" href="./../../wp-content/themes/wp-masjid/wm-css/owl.theme.default.min.css?ver=202629" type="text/css" media="all">
-<link rel="stylesheet" id="wm-font-css" href="./../../wp-content/themes/wp-masjid/wm-css/wm-font.css?ver=202629" type="text/css" media="all">
-<link rel="stylesheet" id="wm-icofont-css" href="./../../wp-content/themes/wp-masjid/wm-css/icofont.css?ver=202629" type="text/css" media="all">
+<link rel="stylesheet" id="wm-mode-css" href="./../../wp-content/themes/wp-masjid/khalifah/style.css?ver=072300" type="text/css" media="all">
+<link rel="stylesheet" id="wm-owl-css" href="./../../wp-content/themes/wp-masjid/wm-css/owl.carousel.min.css?ver=072300" type="text/css" media="all">
+<link rel="stylesheet" id="wm-ani-css" href="./../../wp-content/themes/wp-masjid/wm-css/owl.animate.css?ver=072300" type="text/css" media="all">
+<link rel="stylesheet" id="wm-theme-css" href="./../../wp-content/themes/wp-masjid/wm-css/owl.theme.default.min.css?ver=072300" type="text/css" media="all">
+<link rel="stylesheet" id="wm-font-css" href="./../../wp-content/themes/wp-masjid/wm-css/wm-font.css?ver=072300" type="text/css" media="all">
+<link rel="stylesheet" id="wm-icofont-css" href="./../../wp-content/themes/wp-masjid/wm-css/icofont.css?ver=072300" type="text/css" media="all">
 <link rel="stylesheet" id="web-body-fonts-css" href="https://fonts.googleapis.com/css?family=Almarai%3A300%2C400%2C700%2C800&amp;display=swap&amp;ver=6.9.1" type="text/css" media="all">
 <link rel="stylesheet" id="web-roboto-css" href="https://fonts.googleapis.com/css?family=Roboto&amp;ver=6.9.1" type="text/css" media="all">
 <script type="text/javascript" src="./../../wp-includes/js/jquery/jquery.js?ver=3.7.1" id="jquery-core-js"></script>
@@ -1076,28 +1076,7 @@ html :where(.is-position-sticky){
                         });
                     });
 
-                    // SPECIAL REDIRECT FOR DOA LINKS
-                    document.addEventListener('click', function(e) {
-                        var target = e.target;
-                        var link = target.closest('a');
-                        if (link && link.href) {
-                            if (link.href.indexOf('doa-menyembelih-ayam-dan-tata-caranya') !== -1 || 
-                                (link.textContent && link.textContent.trim().toLowerCase() === 'doa')) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                if (typeof ssSearchUrl !== 'undefined') {
-                                    window.location.href = ssSearchUrl + '?q=doa';
-                                } else {
-                                    // Fallback calculation if ssSearchUrl not defined
-                                    var currentPath = window.location.pathname;
-                                    var newPath = window.location.href.split('?')[0]; 
-                                    // Attempt to find search.html relative
-                                    window.location.href = 'search.html?q=doa';
-                                }
-                                return false;
-                            }
-                        }
-                    }, true);
+
                 });
                 </script></head>
 	
@@ -1137,7 +1116,7 @@ html :where(.is-position-sticky){
 			
 						
 			<div class="ka__sholattime div__clear">
-   				<div class="wm__headspan"><span>Minggu, 8 Februari 2026</span></div>
+   				<div class="wm__headspan"><span>Senin, 9 Februari 2026</span></div>
 				<div class="wm__sholatwidget"><script type="text/javascript" src="https://www.muslimpro.com/muslimprowidget.js?cityid=1625084&language=id&timeformat=24" async></script></div>
 			</div><div class="ka__postshow div__clear">
 	<div class="ka__singpost">
@@ -1682,20 +1661,7 @@ fetch(prayerIDS)
                         });
                     });
 
-                    // 3. Special Redirect for DOA Links
-                    document.addEventListener('click', function(e) {
-                        var target = e.target;
-                        var link = target.closest('a');
-                        if (link && link.href) {
-                            if (link.href.indexOf('doa-menyembelih-ayam-dan-tata-caranya') !== -1 || 
-                                (link.textContent && link.textContent.trim().toLowerCase() === 'doa')) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                redirectToSearchPage('doa');
-                                return false;
-                            }
-                        }
-                    }, true);
+
                 });
                 </script><!-- MASJID_STATIC Debug: Search assets injection completed for: .//takmir/rizwan-maulana/ --></body>
 </html>
