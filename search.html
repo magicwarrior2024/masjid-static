@@ -256,7 +256,7 @@ a, .det__title, .sing__nav a { color: #222222; }
         
         <!-- Ticker -->
         <div class="ka__ticker">
-            <div class="in__ticker">
+            <div class="wm__ticker in__ticker">
                 <ul class="newsticker_post newstickers">
                     <li>This is running Text</li>
                 </ul>
@@ -480,14 +480,17 @@ a, .det__title, .sing__nav a { color: #222222; }
     </script>
     
     <!-- Theme scripts for newsticker -->
-    <script src="./wp-content/themes/wp-masjid/wm-js/acmeticker.min.js"></script>
+    <script src="./wp-content/themes/wp-masjid/wm-script/acmeticker.min.js?ver=6.9"></script>
     <script>
         jQuery(document).ready(function($) {
-            $('.newstickers').acmeticker({ 
-                speed: 50, 
-                delay: 0, 
-                pauseOnHover: true
-            });
+            if ($.fn.AcmeTicker) {
+                $('.newstickers').AcmeTicker({ 
+                    type: 'horizontal',
+                    speed: 50, 
+                    autoplay: 2000, 
+                    pauseOnHover: true
+                });
+            }
         });
     </script>
 </body>
