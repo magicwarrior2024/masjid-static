@@ -335,7 +335,9 @@ a, .det__title, .sing__nav a { color: #222222; }
             }
             
             // If already relative, return as-is
-            if (url.startsWith('./') || url.startsWith('../')) {
+            if (url.startsWith('./')) {
+                relativePath = url.replace('./', '../');
+            } else if (url.startsWith('../')) {
                 relativePath = url;
             }
             
