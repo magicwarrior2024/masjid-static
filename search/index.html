@@ -329,7 +329,7 @@ a, .det__title, .sing__nav a { color: #222222; }
             // Try to convert from WordPress URL to relative path
             for (const base of wpBases) {
                 if (url.startsWith(base)) {
-                    relativePath = url.replace(base, './');
+                    relativePath = url.replace(base, '../');
                     break;
                 }
             }
@@ -358,7 +358,7 @@ a, .det__title, .sing__nav a { color: #222222; }
         
         async function loadIndex() {
             try {
-                const response = await fetch('./search-index.json');
+                const response = await fetch('../search-index.json');
                 if (!response.ok) throw new Error('Gagal memuat index pencarian');
                 
                 const data = await response.json();
