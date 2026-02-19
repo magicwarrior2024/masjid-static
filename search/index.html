@@ -1,98 +1,373 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Pencarian konten di website Mosque">
+    <title>Pencarian - Mosque</title>
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <title>Pencarian - Mosque</title>
-    
-    <!-- Theme Stylesheets -->
-    <link rel="stylesheet" id="wm-style-css" href="../wp-content/themes/wp-masjid/style.css?ver=112419" type="text/css" media="all">
-    <style id="wm-style-inline-css" type="text/css">
-body, .wm__looppost, .pagination a, #bigslider .owl-theme .owl-dots, .ka__sholattime, .ka__address:before, .ka__address:after, .kajum__block, .shalat__name, .saldo__real span, .kali__book { background: ##ffffff; }
-.khalifah .MPtimetable tr, .khalifah .MPtimetable tr:nth-child(2n) { background-color: #ffffff !important; }
-.karek__title { color: #ffffff; border-color: #ffffff; }
-.in__img span, .tak__img i, .wm__tags a, .pagination a:hover, .ka__address, .ka__pro, .tau__time, .kashalat__in, .saldo__in, .rek__link, .rek__in, .book__count, .kaev__date, .only__one .kaev__date, .sing__share a, .sing__nav i, #submit, .pagination a { color : ##ffffff; }
-body, .detin__post, .pagination a, .ka__sholattime, .wpm_singleIDS:after, .kajum__block, .khalifah .MPtimetable tr td:before { color: #555555; } .khalifah .MPwidget .title a, .khalifah .MPtimetable { color: #555555 !important; } .ka__heading:after { border-top: 1px solid #555555; } #bigslider .owl-theme .owl-dots .owl-dot span, .sing__notable td:after { background: #555555; } .sing__tag a { color: #555555; }
-a, .det__title, .sing__nav a { color: #222222; }
-.wm__ticker, #bigslider .owl-theme .owl-dots .owl-dot.active span, .in__ticker { background: #dc143c; } .wpm__estTime, .khalifah .MPtimetable td:nth-child(2) { color: #dc143c; }
-.wm__ticker, .in__ticker { color: #ffffff; }
-.wm__ticker a, .in__ticker a { color: #ffffff; }
-.wm__header, .wm__sholat .MPtimetable tr, #timewpmtableIDS, .ka__header, .kalmenu { background: #ffffff; } .wm__sholat .MPtimetable { border: solid 8px #ffffff; border-top: solid 5px #ffffff; } .is-desktop .accord ul li a, .ka__call .call__icon { color: #ffffff; }
-.wm__header, .wm__sholat .MPheader .title a, .wm__sholat .MPtimetable tr td:before, .kalmenu a, .call__span { color: #333333; } .ka__logo span:after, .ka__logo span:before { border-color: #333333; } .is-mobile .accord li.menu-item-has-children:before { background: #333333; }
-.wm__sholat h3 span, .wm__sholat .MPtimetable td:nth-child(2) { color: #dc143c; } .is-desktop .accord > li.menu-item-has-children:before, .is-desktop .accord li > ul, .ka__call .call__icon, .call__icon:before { background: #dc143c; }
-.wm__sectionmenu, .navmenu .dd.desktop li ul, .noscroll .header_masjid_menu { background: #ffffff; } @media screen and (max-width: 982px) { .header_masjid_menu { background: #ffffff; } }
-.wm__sectionmenu a { color: #dc143c; }
-.wm__sectionmenu a:hover { color: #333333; } .wm__openmenu { background: #333333; }
-.wp__is, .wm__openmenu { background: #dc143c; } .search-btn { background: #dc143c; } .wm-header-search input { background: #dc143c; }
-.footer, .fo__contact, .fo__contact .hidden_info, .ka__footer { background: #dc143c; } .ka__footer .wm__social i { color: #dc143c; }
-.footer, .fo__contact, .fo__contact .hidden_info, .ka__footer { color: #ffffff; } .fo__detail td:after { background: #ffffff; }
-.footer a, .fo__contact a, .ka__footer a { color: #ffffff; } .ka__footer .wm__social i { background: #ffffff; }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet">
 
-    </style>
-    <link rel="stylesheet" id="wm-mode-css" href="../wp-content/themes/wp-masjid/khalifah/style.css?ver=112419" type="text/css" media="all">
-    <link rel="stylesheet" id="wm-owl-css" href="../wp-content/themes/wp-masjid/wm-css/owl.carousel.min.css?ver=112419" type="text/css" media="all">
-    <link rel="stylesheet" id="wm-font-css" href="../wp-content/themes/wp-masjid/wm-css/wm-font.css?ver=112419" type="text/css" media="all">
-    <link rel="stylesheet" id="wm-icofont-css" href="../wp-content/themes/wp-masjid/wm-css/icofont.css?ver=112419" type="text/css" media="all">
-    <link rel="stylesheet" id="web-body-fonts-css" href="https://fonts.googleapis.com/css?family=Acme%3A400&display=swap&ver=6.9" type="text/css" media="all">
-    <script type="text/javascript" src="../wp-includes/js/jquery/jquery.js?ver=3.7.1" id="jquery-core-js"></script>
-    
+    <!-- CSS from Index -->
+    <link rel="stylesheet" id="wm-mode-css" href="../wp-content/themes/wp-masjid/masjid/style.css?ver=222027"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="wm-owl-css" href="../wp-content/themes/wp-masjid/wm-css/owl.carousel.min.css?ver=222027"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="wm-ani-css" href="../wp-content/themes/wp-masjid/wm-css/owl.animate.css?ver=222027"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="wm-theme-css"
+        href="../wp-content/themes/wp-masjid/wm-css/owl.theme.default.min.css?ver=222027" type="text/css" media="all">
+    <link rel="stylesheet" id="wm-font-css" href="../wp-content/themes/wp-masjid/wm-css/wm-font.css?ver=222027"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="wm-icofont-css" href="../wp-content/themes/wp-masjid/wm-css/icofont.css?ver=222027"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="web-body-fonts-css"
+        href="https://fonts.googleapis.com/css?family=ABeeZee%3A400%2C400italic&amp;display=swap&amp;ver=6.9" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="web-roboto-css" href="https://fonts.googleapis.com/css?family=Roboto&amp;ver=6.9"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="wp-block-paragraph-css" href="../wp-includes/blocks/paragraph/style.css?ver=6.9"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="wm-style-css" href="../wp-content/themes/wp-masjid/style.css?ver=222027" type="text/css"
+        media="all">
+
     <style type="text/css">
-        body, button, input, select, textarea { font-family: Acme, Poppins, sans-serif; font-size: 14px; }
-        
-        /* Search Specific Styles */
-        .search-container { max-width: 900px; margin: 40px auto; padding: 0 20px; min-height: 400px; }
-        .search-title h1 { color: #FF7F50; margin: 0 0 10px; font-size: 28px; }
-        .search-title p { color: #777; margin: 0 0 20px; }
-        .search-form { display: flex; gap: 10px; margin-bottom: 20px; }
-        .search-form input { flex: 1; padding: 12px 16px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; }
-        .search-form input:focus { outline: none; border-color: #FF7F50; }
-        .search-btn { background: #FF7F50; color: #fff; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; }
-        .search-btn:hover { background: #e56b3e; }
-        #ss-search-status { padding: 10px 0; color: #555; }
-        .ss-result-card { display: flex; gap: 20px; padding: 20px; margin-bottom: 16px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; text-decoration: none; color: inherit; transition: 0.3s; }
-        .ss-result-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-color: #FF7F50; }
-        .ss-result-thumb { width: 140px; height: 100px; border-radius: 6px; overflow: hidden; flex-shrink: 0; background: #eee; }
-        .ss-result-thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .ss-result-content { flex: 1; }
-        .ss-result-title { font-size: 18px; font-weight: 600; color: #333; margin: 0 0 8px; }
-        .ss-result-title mark { background: #fff3cd; padding: 0 2px; }
-        .ss-result-excerpt { font-size: 14px; color: #555; line-height: 1.5; }
-        .ss-result-meta { font-size: 12px; color: #999; margin-top: 8px; }
-        
-        @media (max-width: 768px) {
-            .search-form { flex-direction: column; }
-            .ss-result-card { flex-direction: column; }
-            .ss-result-thumb { width: 100%; height: 160px; }
+        body,
+        button,
+        input,
+        select,
+        textarea,
+        .wm__sholat .MPwidget .title a,
+        .wm__sholat .MPtimetable td {
+            font-family: ABeeZee;
         }
-        
-        /* Prayer Time Names - CSS Pseudo-elements */
-        .khalifah .MPtimetable tr:nth-child(2) td:nth-child(1):before,
-        .wm__sholat .MPtimetable tr:nth-child(2) td:nth-child(1):before {
-            content: "Subuh";
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-size: 14px;
         }
-        .khalifah .MPtimetable tr:nth-child(3) td:nth-child(1):before,
-        .wm__sholat .MPtimetable tr:nth-child(3) td:nth-child(1):before {
-            content: "Terbit";
+
+        /* Fix mobile menu visibility */
+        body.open_menu .navmenu {
+            display: block !important;
         }
-        .khalifah .MPtimetable tr:nth-child(4) td:nth-child(1):before,
-        .wm__sholat .MPtimetable tr:nth-child(4) td:nth-child(1):before {
-            content: "Dzuhur";
+    </style>
+
+    <script type="text/javascript" src="../wp-includes/js/jquery/jquery.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="../wp-includes/js/jquery/jquery-migrate.js?ver=3.4.1"
+        id="jquery-migrate-js"></script>
+
+    <!-- Inline Styles from Index for Layout -->
+    <style id="wm-style-inline-css" type="text/css">
+        body,
+        .wm__looppost,
+        .pagination a,
+        .ka__sholattime,
+        .kajum__block {
+            background-color: #ffffff;
+            color: #555555;
         }
-        .khalifah .MPtimetable tr:nth-child(5) td:nth-child(1):before,
-        .wm__sholat .MPtimetable tr:nth-child(5) td:nth-child(1):before {
-            content: "Ashar";
+
+        .khalifah .MPwidget .title a,
+        .khalifah .MPtimetable,
+        .khalifah .MPtimetable tr td:before {
+            color: #555555 !important;
         }
-        .khalifah .MPtimetable tr:nth-child(6) td:nth-child(1):before,
-        .wm__sholat .MPtimetable tr:nth-child(6) td:nth-child(1):before {
-            content: "Maghrib";
+
+        .khalifah .MPtimetable tr,
+        .khalifah .MPtimetable tr:nth-child(2n) {
+            background-color: #ffffff !important;
         }
-        .khalifah .MPtimetable tr:nth-child(7) td:nth-child(1):before,
-        .wm__sholat .MPtimetable tr:nth-child(7) td:nth-child(1):before {
-            content: "Isya";
+
+        .detin__post,
+        .wpm_singleIDS:after {
+            color: #555555;
+        }
+
+        .ka__heading:after {
+            border-top: 1px solid #555555;
+        }
+
+        .sing__notable td:after {
+            background: #555555;
+        }
+
+        a,
+        .det__title a {
+            color: #222222;
+        }
+
+        .sing__nav i,
+        #submit,
+        .pagination a {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .wpm__estTime,
+        .khalifah .MPtimetable td:nth-child(2) {
+            color: #7bae91;
+        }
+
+        .comment-reply-link {
+            color: #7bae91;
+        }
+
+        .in__img span,
+        .tak__img i,
+        .wm__tags a,
+        .pagination a:hover,
+        .pagination a:active,
+        .sing__share a {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .sing__nav a {
+            color: #7bae91;
+        }
+
+        .sing__tag a {
+            color: #555555;
+            border: 1px solid #7bae91;
+        }
+
+        .wm__ticker,
+        .in__ticker {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .wm__ticker a,
+        .in__ticker a {
+            color: #ffffff;
+        }
+
+        .wm__header {
+            background: #ffffff;
+            color: #333333;
+        }
+
+        .ka__header,
+        .kalmenu {
+            background: #ffffff;
+        }
+
+        .wm__sholat .MPtimetable tr,
+        #timewpmtableIDS {
+            background: #ffffff;
+        }
+
+        .is-desktop .accord ul li a {
+            color: #ffffff;
+        }
+
+        .wm__sholat .MPtimetable {
+            border: solid 8px #ffffff;
+            border-top: solid #ffffff;
+        }
+
+        .wm__sholat .MPheader .title a,
+        .wm__sholat .MPtimetable tr td:before,
+        .kalmenu a,
+        .call__span {
+            color: #333333;
+        }
+
+        .is-mobile .accord li.menu-item-has-children:before {
+            background: #333333;
+        }
+
+        .ka__logo span:after,
+        .ka__logo span:before {
+            border-color: #333333;
+        }
+
+        .wm__sholat h3 span,
+        .wm__sholat .MPtimetable td:nth-child(2) {
+            color: #7bae91;
+        }
+
+        .is-desktop .accord>li.menu-item-has-children:before,
+        .is-desktop .accord li>ul {
+            background: #7bae91;
+        }
+
+        .ka__call .call__icon,
+        .call__icon:before {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .wm__sectionmenu,
+        .navmenu .dd.desktop li ul,
+        .noscroll .header_masjid_menu {
+            background: #ffffff;
+        }
+
+        @media screen and (max-width: 982px) {
+            .header_masjid_menu {
+                background: #ffffff;
+            }
+        }
+
+        .wm__sectionmenu a {
+            color: #7bae91;
+        }
+
+        .wm__sectionmenu a:hover {
+            color: #333333;
+        }
+
+        .wp__is,
+        .wm__openmenu {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        #wmcontact:before {
+            background: #ffffff;
+        }
+
+        .wm__afterslider,
+        .toggle_info,
+        .hidden_info {
+            background: #ffffff;
+            color: #333333;
+        }
+
+        .close_info {
+            background: #333333;
+            color: #ffffff;
+        }
+
+        .wm__hotnumber a,
+        .ka__dkmbio {
+            color: #333333;
+        }
+
+        .wm__address i,
+        .ka__address i {
+            color: #7bae91;
+        }
+
+        .ka__address,
+        .ka__pro {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .wm__pro,
+        .wm__hotline .wm__social i {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .footer,
+        .fo__contact,
+        .fo__contact .hidden_info,
+        .ka__footer {
+            background: #7bae91;
+            color: #ffffff;
+        }
+
+        .fo__detail td:after,
+        .ka__footer:after {
+            background: #ffffff;
+        }
+
+        .footer a,
+        .fo__contact a,
+        .ka__footer a {
+            color: #ffffff;
+        }
+
+        .ka__footer .wm__social i {
+            background: #ffffff;
+            color: #7bae91;
+        }
+
+        /* Custom Styles for Search Page */
+        .ss-search-wrapper {
+            padding: 50px 0;
+            min-height: 500px;
+        }
+
+        .ss-result-card {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .ss-result-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #7bae91;
+        }
+
+        .ss-result-thumb {
+            width: 150px;
+            height: 110px;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #eee;
+        }
+
+        .ss-result-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ss-result-content {
+            flex: 1;
+        }
+
+        .ss-result-title {
+            font-size: 18px;
+            margin: 0 0 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .ss-result-meta {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .ss-result-excerpt {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .ss-result-excerpt mark,
+        .ss-result-title mark {
+            background: #fff3cd;
+            padding: 0 2px;
+        }
+
+        @media (max-width: 600px) {
+            .ss-result-card {
+                flex-direction: column;
+            }
+
+            .ss-result-thumb {
+                width: 100%;
+                height: 180px;
+            }
         }
     </style>
 <style>
@@ -134,53 +409,79 @@ a, .det__title, .sing__nav a { color: #222222; }
 </style>
 </head>
 
-<body class="wp-singular page-template-default page wp-custom-logo wp-embed-responsive wp-theme-wp-masjid">
-    <div class="wrapper khalifah">
-        <div class="ka__container">
-            <!-- Header -->
-            <div class="ka__header div__clear">
-                <div class="ka__logo">
-                    <span onclick="kalimenu()"></span>
-                    <a href="./index.html" class="custom-logo-link" rel="home">
-                        <img src="http://localhost/mosque/wp-content/uploads/2023/03/cropped-webmasjid.png" class="custom-logo" alt="Mosque" decoding="async">
-                    </a>
-                </div>
-                <div class="ka__menu">
-                    <div class="kalmenu">
-                        <ul id="kal_accord" class="accord">
-<li class="menu-item"><a href="../index.html">Home</a></li>
-<li class="menu-item"><a href="../infaq/index.html">Infaq</a></li>
-<li class="menu-item"><a href="../event/index.html">Agenda</a></li>
-<li class="menu-item"><a href="../full-width-page/index.html">Full Width Page</a></li>
-<li class="menu-item"><a href="../page-sidebar/index.html">Sidebar</a></li>
-<li class="menu-item"><a href="../blog/index.html">Blog</a></li>
-<li class="menu-item"><a href="../kontak/index.html">Kontak</a></li>
-</ul>
-                    </div>
-                    <div class="ka__call">
-                        <div class="wm__hotnumber">
-                            <a href="tel:08123456789">
-                                <span class="call__icon"><i class="icon-wm-phone"></i></span>
-                                <span class="call__span">08123456789</span>
+<body
+    class="home wp-singular page-template-default page page-id-282 wp-custom-logo wp-embed-responsive wp-theme-wp-masjid">
+    <div class="wrapper">
+        <!-- HEADER SECTION FROM INDEX.HTML -->
+        <div class="wm__header">
+            <div class="wm__ticker">
+                <ul class="newsticker_post newstickers">
+                <li>This is running Text</li>
+                </ul>
+            </div>
+
+            <div class="wm__mainheader">
+                <div class="wm__container">
+                    <div class="div__clear">
+                        <div class="wm__logo">
+                            <a href="../" class="custom-logo-link" rel="home" aria-current="page">
+                                <img width="600" height="108" src="../wp-content/uploads/2023/03/cropped-webmasjid.png"
+                                    class="custom-logo" alt="Mosque">
                             </a>
+                        </div>
+                        <span class="wm__openmenu"><i class="icon-wm-menu"></i></span>
+                        <div class="wm__sholat">
+                            <div class="wm__headspan"><span id="wm-date-display">Sunday, 1 February 2026</span></div>
+                            <div class="wm__sholatwidget">
+                                <script type="text/javascript"
+                                    src="https://www.muslimpro.com/muslimprowidget.js?cityid=1625084&language=id&timeformat=24"
+                                    async></script>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Prayer Times / Date -->
-            <div class="ka__sholattime div__clear">
-                <div class="wm__headspan"><span id="current-date"></span></div>
-                <div class="wm__sholatwidget">
-                    <script type="text/javascript" src="https://www.muslimpro.com/muslimprowidget.js?cityid=1625084&language=id&timeformat=24" async></script>
+
+            <div class="header_masjid_menu">
+                <div class="wm__container">
+                    <div class="wm__sectionmenu div__clear">
+                        <div class="wm__menu">
+                            <div class="navmenu"><ul id="dd" class="dd desktop deskmenu"><li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-282 current_page_item menu-item-310"><a href="./" aria-current="page">Home</a></li>
+<li id="menu-item-265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-265"><a href="#">Infaq</a>
+<ul class="sub-menu">
+	<li id="menu-item-264" class="menu-item menu-item-type-taxonomy menu-item-object-bulan menu-item-264"><a href="./infaq/bulan/maret-2023/">Maret 2023</a></li>
+	<li id="menu-item-263" class="menu-item menu-item-type-taxonomy menu-item-object-bulan menu-item-263"><a href="./infaq/bulan/februari-2023/">Februari 2023</a></li>
+</ul>
+</li>
+<li id="menu-item-572" class="menu-item menu-item-type-post_type_archive menu-item-object-event menu-item-572"><a href="./event/">Agenda</a></li>
+<li id="menu-item-574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-574"><a href="#">Masjid</a>
+<ul class="sub-menu">
+	<li id="menu-item-573" class="menu-item menu-item-type-post_type_archive menu-item-object-tausiyah menu-item-573"><a href="./tausiyah/">Tausiyah</a></li>
+	<li id="menu-item-571" class="menu-item menu-item-type-post_type_archive menu-item-object-pengumuman menu-item-571"><a href="./pengumuman/">Pengumuman</a></li>
+	<li id="menu-item-575" class="menu-item menu-item-type-post_type_archive menu-item-object-wakaf menu-item-575"><a href="./wakaf/">Laporan Wakaf</a></li>
+	<li id="menu-item-576" class="menu-item menu-item-type-post_type_archive menu-item-object-lembaga menu-item-576"><a href="./lembaga/">Lembaga</a></li>
+</ul>
+</li>
+<li id="menu-item-308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="./full-width-page/">Full Width Page</a></li>
+<li id="menu-item-307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307"><a href="./page-sidebar/">Sidebar</a></li>
+<li id="menu-item-561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="./blog/">Blog</a></li>
+<li id="menu-item-300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300"><a href="./kontak/">Kontak</a></li>
+</ul></div></div><div class="wm__search">
+                            <form method="get" id="searchform" action="./">
+                                <div class="input__search">
+                                    <input class="wp__is" id="header-search-input" name="q" type="text"
+                                        placeholder="Search..." value="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Main Content - Search -->
-            <div class="ka__postshow div__clear">
-                <div class="ka__singpost ka__singpost--centered">
-                    <div class="ka__singin">
-                                <div class="search-container">
+        </div>
+
+        <!-- MAIN SEARCH CONTENT -->
+        <div class="wm__container ss-search-wrapper">
+                   <div class="search-container">
             <div class="search-title">
                 <h1>Pencarian</h1>
                 <p>Cari artikel, tausiyah, pengumuman dan konten lainnya</p>
@@ -194,139 +495,92 @@ a, .det__title, .sing__nav a { color: #222222; }
             <div id="ss-search-status"></div>
             <div id="ss-search-results"></div>
         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Contact/Footer Section (matching fo__contact structure) -->
-            <div class="fo__contact div__clear">
-                <div class="ka__masdata">
-                    <div class="hidden_info">
-                        <div class="ka__maps">
-                            <div class="info__maps">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.3930955623581!2d106.6996827!3d-6.3197623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5b0f03d8521%3A0x82b01a95ced4beab!2sMUSHOLLA%20AL%20JIHAD!5e0!3m2!1sen!2sid!4v1770481663859!5m2!1sen!2sid" width="600" height="450" allowfullscreen=""></iframe>
-                            </div>
-                        </div>
-                        <div class="ka__details">
-                            <div class="fo__masjid">
-                                <div class="wm__name">Masjid At-Taqwa</div>
-                                <div class="wm__location">Mulia Serpong Blok D3, Jl Masjid Ciater, Ciater</div>
-                            </div>
-                            <div class="fo__detail">
-                                <table>
-                                    <tbody>
-                                        <tr style="display: table-row">
-                                            <td>Luas Area</td>
-                                            <td class="info__right">750 m2</td>
-                                        </tr>
-                                        <tr style="display: table-row">
-                                            <td>Luas Bangunan</td>
-                                            <td class="info__right">490 m2</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="fo__detail">
-                                <table>
-                                    <tbody>
-                                        <tr style="display: table-row">
-                                            <td>Status Lokasi</td>
-                                            <td class="info__right">Waqaf</td>
-                                        </tr>
-                                        <tr style="display: table-row">
-                                            <td>Tahun Berdiri</td>
-                                            <td class="info__right">1978</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Footer Copyright -->
-            <div class="ka__footer">
+        </div>
+
+        <!-- FOOTER SECTION FROM INDEX.HTML -->
+        <div class="footer">
+            <div class="wm__container">
                 <div class="copyright">
                     MasjidStatic Supported by <a href="https://ciuss.com/">Ciuss Creative</a>
                 </div>
-                <div class="wm__social"><a href="mailto:yeffendi76@gmail.com"><i class="icon-wm-mail"></i></a><a target="_blank" href="https://wa.me/62082210021088"><i class="icon-wm-whatsapp"></i></a></div>
-            </div>
-        </div>
-        
-        <!-- Ticker -->
-        <div class="ka__ticker">
-            <div class="wm__ticker in__ticker">
-                <ul class="newsticker_post newstickers">
-                    <li>This is running Text</li>
-                </ul>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
+    <div class="hidden_info">
+        <div class="ka__maps"></div>
+        <div class="ka__details">
+            <div class="fo__masjid">
+                <div class="wm__name">Masjid At-Taqwa</div>
+                <div class="wm__location">Jl Raya Lintas Liwa, Wonosari II, Simpang Sari, Sumber Jaya, Lampung Barat
+                </div>
+            </div>
+            <div class="fo__detail">
+                <table></table>
+            </div>
+            <div class="fo__detail">
+                <table></table>
+            </div>
+        </div>
+    </div>
+    <span class="toggle_info"><i class="icon-wm-maps"></i></span>
+
+    <script type="text/javascript" src="../wp-content/themes/wp-masjid/wm-script/owl.carousel.min.js?ver=6.9"
+        id="wm-owls-js"></script>
+    <script type="text/javascript" src="../wp-content/themes/wp-masjid/wm-script/acmeticker.min.js?ver=6.9"
+        id="wm-ticker-js"></script>
+    <script type="text/javascript" src="../wp-content/themes/wp-masjid/wm-script/footer.js?ver=6.9"
+        id="wm-footer-js"></script>
+    
+    <!-- Initialize Ticker -->
     <script>
-        // Menu toggle for mobile
-        document.querySelectorAll(".menu-item-has-children").forEach(function(parent) {
-            parent.addEventListener("click", function(event) {
-                event.stopPropagation();
-                this.classList.toggle("active");
+        jQuery(document).ready(function($) {
+            $('.newstickers').acmeticker({ 
+                speed: 50, 
+                delay: 0, 
+                pauseOnHover: true
             });
         });
-        
-        // Update wrapper class based on screen size
-        document.addEventListener("DOMContentLoaded", function () {
-            function updateWrapperClass() {
-                const wrapper = document.querySelector(".wrapper");
-                if (wrapper) {
-                    if (window.innerWidth <= 982) {
-                        wrapper.classList.remove("is-desktop");
-                        wrapper.classList.add("is-mobile");
-                    } else {
-                        wrapper.classList.remove("is-mobile");
-                        wrapper.classList.add("is-desktop");
-                    }
-                }
-            }
-            updateWrapperClass();
-            window.addEventListener("resize", updateWrapperClass);
-            
-            // Set current date
-            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateEl = document.getElementById('current-date');
-            if (dateEl) dateEl.textContent = new Date().toLocaleDateString('id-ID', dateOptions);
-        });
-        
-        function kalimenu() {
-            document.body.classList.toggle('kalimenu');
-            document.body.classList.remove('togglebar', 'toshare', 'tomenu');
-        }
     </script>
-    
-    <!-- Search Scripts -->
+
+    <!-- Theme Scripts -->
+    <!-- Essential Scripts for Menu Toggle etc -->
+    <script>
+        // Simple script to handle mobile menu toggle if jquery isn't fully loaded or handles it differnetly in this context
+        jQuery(document).ready(function ($) {
+            $('.wm__openmenu').click(function () {
+                $('.navmenu').slideToggle();
+            });
+
+            // Current Date for Header
+            var d = new Date();
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("wm-date-display").textContent = days[d.getDay()] + ", " + d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+        });
+    </script>
+
+    <!-- FlexSearch Logic -->
     <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
     <script>
-        // Search Logic
         window.searchIndex = null;
         window.searchData = [];
-        
+
         // Convert WordPress URLs to static site relative paths
         function convertToStaticUrl(url) {
             if (!url) return url;
             
-            // List of known WordPress base URLs
-            const wpBases = [
-                'http://localhost/mosque/',
-                'https://localhost/mosque/',
-                'http://localhost/masjid/',
-                'https://localhost/masjid/',
-                window.location.origin + '/mosque/',
-                window.location.origin + '/masjid/'
-            ];
+            // Dynamic WP Bases from PHP
+            const wpBases = ["http:\/\/localhost\/mosque\/","http:\/\/localhost\/mosque","http:\/\/localhost\/mosque\/","https:\/\/localhost\/mosque\/"];
+            
+            // Add current origin as fallback
+            const origin = window.location.origin;
+            const path = '/mosque';
+            wpBases.push(origin + path + '/');
             
             let relativePath = url;
             
-            // Try to convert from WordPress URL to relative path
+            // Try to match and replace base
             for (const base of wpBases) {
                 if (url.startsWith(base)) {
                     relativePath = url.replace(base, '../');
@@ -334,21 +588,28 @@ a, .det__title, .sing__nav a { color: #222222; }
                 }
             }
             
-            // If already relative, return as-is
+            // Handle root relative paths if needed
+            const siteUrl = 'http://localhost/mosque';
+            if (url.startsWith(siteUrl)) {
+                 relativePath = url.replace(siteUrl, '..');
+            }
+            
             if (url.startsWith('./')) {
                 relativePath = url.replace('./', '../');
             } else if (url.startsWith('../')) {
                 relativePath = url;
+            } else if (url.indexOf('://') === -1 && !url.startsWith('/')) {
+                // Already relative filename?
+                relativePath = '../' + url;
             }
             
-            // For page URLs (not wp-content), add index.html if needed
+            // Append index.html to directory links
             if (!relativePath.includes('wp-content') && 
                 !relativePath.includes('.html') && 
                 !relativePath.includes('.json') && 
-                !relativePath.includes('.jpg') && 
-                !relativePath.includes('.png') && 
-                !relativePath.includes('.gif')) {
-                // Ensure trailing slash then add index.html
+                !relativePath.includes('#') &&
+                !relativePath.includes('?')) {
+                
                 if (!relativePath.endsWith('/')) {
                     relativePath += '/';
                 }
@@ -357,143 +618,107 @@ a, .det__title, .sing__nav a { color: #222222; }
             
             return relativePath;
         }
-        
-        async function loadIndex() {
-            try {
-                const response = await fetch('../search-index.json');
-                if (!response.ok) throw new Error('Gagal memuat index pencarian');
-                
-                const data = await response.json();
+
+        fetch("../search-index.json")
+            .then(r => { if (!r.ok) throw new Error("Not found"); return r.json(); })
+            .then(data => {
                 window.searchData = data;
-                
                 window.searchIndex = new FlexSearch.Document({
-                    document: {
-                        id: "id",
-                        index: ["title", "content", "excerpt"],
-                        store: ["title", "url", "excerpt", "thumbnail", "date"]
-                    },
-                    tokenize: "forward"
+                    document: { id: "id", index: ["title", "content", "excerpt"], store: true },
+                    tokenize: "forward", cache: true
                 });
+                data.forEach((item, i) => {
+                    window.searchIndex.add({ id: i, title: item.title || "", content: item.content || "", excerpt: item.excerpt || "" });
+                });
+                console.log("Search index loaded:", data.length, "items");
+
+                // Check for 'q' OR 's' (standard WP) query parameters
+                const params = new URLSearchParams(location.search);
+                const q = params.get("q") || params.get("s");
                 
-                data.forEach(item => window.searchIndex.add(item));
-                console.log("Search index loaded for Khalifah layout");
-                return true;
-            } catch (err) {
-                console.error(err);
-                document.getElementById('ss-search-status').innerHTML = 'Gagal memuat index pencarian.';
-                return false;
+                if (q) { document.getElementById("ss-search-input").value = q; performSearch(); }
+            })
+            .catch(e => {
+                console.error("Failed to load search index:", e);
+                document.getElementById("ss-search-status").innerHTML = '<span style="color:#dc3545;">Gagal memuat indeks pencarian.</span>';
+            });
+
+        function performSearch() {
+            const query = document.getElementById("ss-search-input").value.trim();
+            const results = document.getElementById("ss-search-results");
+            const status = document.getElementById("ss-search-status");
+
+            if (!query) { results.innerHTML = ""; status.innerHTML = ""; return; }
+            if (!window.searchIndex) { status.innerHTML = "Memuat..."; return; }
+
+            const res = window.searchIndex.search(query, { limit: 20, enrich: true });
+            const ids = new Set();
+            res.forEach(r => r.result.forEach(x => ids.add(x.id)));
+            const items = Array.from(ids).map(id => window.searchData[id]);
+
+            if (!items.length) {
+                status.innerHTML = "";
+                results.innerHTML = '<div style="text-align:center; padding:40px; color:#888;"><h3>Tidak ada hasil untuk "' + esc(query) + '"</h3><p>Coba kata kunci lain.</p></div>';
+                return;
             }
+
+            status.innerHTML = 'Ditemukan <strong>' + items.length + '</strong> hasil untuk "<strong>' + esc(query) + '</strong>"';
+
+            let html = "";
+            items.forEach(item => {
+                const url = convertToStaticUrl(item.url);
+                const thumb = convertToStaticUrl(item.thumbnail) || "../wp-content/themes/wp-masjid/wm-img/share.jpg";
+                const excerpt = hl(item.excerpt || (item.content ? item.content.substring(0, 180) : ""), query);
+                const date = item.date_formatted || "";
+                html += '<a href="' + url + '" class="ss-result-card">' +
+                    '<div class="ss-result-thumb"><img src="' + thumb + '" alt="" onerror="this.src=\'../wp-content/themes/wp-masjid/wm-img/share.jpg\'"></div>' +
+                    '<div class="ss-result-content">' +
+                    '<h3 class="ss-result-title">' + hl(item.title || "Untitled", query) + '</h3>' +
+                    '<div class="ss-result-meta">' + date + (item.author ? " • " + item.author : "") + '</div>' +
+                    '<div class="ss-result-excerpt">' + excerpt + '...</div>' +
+                    '</div>' +
+                    '</a>';
+            });
+            results.innerHTML = html;
+            history.replaceState(null, "", location.pathname + "?q=" + encodeURIComponent(query));
         }
 
-        async function performSearch() {
-            const query = document.getElementById('ss-search-input').value.trim();
-            const statusDiv = document.getElementById('ss-search-status');
-            const resultsDiv = document.getElementById('ss-search-results');
-            
-            if (query.length < 2) {
-                statusDiv.innerHTML = 'Mohon masukkan minimal 2 karakter.';
-                return;
-            }
-            
-            if (!window.searchIndex) {
-                statusDiv.innerHTML = 'Sedang memuat index...';
-                return;
-            }
-            
-            statusDiv.innerHTML = 'Sedang mencari...';
-            resultsDiv.innerHTML = '';
-            
-            try {
-                const results = window.searchIndex.search(query, { limit: 20, enrich: true });
-                
-                if (results.length === 0) {
-                    statusDiv.innerHTML = 'Tidak ditemukan hasil untuk: <strong>' + escapeHtml(query) + '</strong>';
-                    return;
+        function hl(text, query) {
+            if (!query || !text) return esc(text);
+            return esc(text).replace(new RegExp("(" + escRx(query) + ")", "gi"), "<mark>$1</mark>");
+        }
+        function esc(t) { const d = document.createElement("div"); d.textContent = t || ""; return d.innerHTML; }
+        function escRx(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+        document.getElementById("ss-search-input").addEventListener("keyup", e => { if (e.key === "Enter") performSearch(); });
+
+        // Sync header search input to main search
+        document.getElementById("header-search-input").addEventListener("keydown", e => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                const q = e.target.value.trim();
+                if (q) {
+                    document.getElementById("ss-search-input").value = q;
+                    performSearch();
+                    window.scrollTo({ top: document.querySelector(".ss-search-wrapper").offsetTop - 100, behavior: 'smooth' });
                 }
-                
-                const uniqueResults = new Map();
-                results.forEach(field => {
-                    field.result.forEach(item => {
-                        if (!uniqueResults.has(item.id)) {
-                            uniqueResults.set(item.id, item.doc);
-                        }
-                    });
-                });
-                
-                statusDiv.innerHTML = 'Ditemukan ' + uniqueResults.size + ' hasil untuk "<strong>' + escapeHtml(query) + '</strong>"';
-                
-                uniqueResults.forEach(doc => {
-                    const card = document.createElement('a');
-                    card.className = 'ss-result-card';
-                    card.href = convertToStaticUrl(doc.url);
-                    
-                    let thumbHtml = '';
-                    if (doc.thumbnail) {
-                        const thumbUrl = convertToStaticUrl(doc.thumbnail);
-                        thumbHtml = '<div class="ss-result-thumb"><img src="' + thumbUrl + '" alt="" loading="lazy"></div>';
-                    }
-                    
-                    const highlightedTitle = highlightText(doc.title, query);
-                    const excerpt = doc.excerpt ? highlightText(doc.excerpt.substring(0, 200), query) + '...' : '';
-                    
-                    card.innerHTML = thumbHtml +
-                        '<div class="ss-result-content">' +
-                            '<div class="ss-result-title">' + highlightedTitle + '</div>' +
-                            '<div class="ss-result-excerpt">' + excerpt + '</div>' +
-                            (doc.date ? '<div class="ss-result-meta">' + doc.date + '</div>' : '') +
-                        '</div>';
-                    resultsDiv.appendChild(card);
-                });
-                
-            } catch (error) {
-                console.error(error);
-                statusDiv.innerHTML = 'Terjadi kesalahan saat mencari.';
             }
-        }
-        
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-        
-        function highlightText(text, query) {
-            if (!query || !text) return escapeHtml(text);
-            const escaped = escapeHtml(text);
-            const regex = new RegExp('(' + escapeRegex(query) + ')', 'gi');
-            return escaped.replace(regex, '<mark>$1</mark>');
-        }
-        
-        function escapeRegex(s) {
-            return s.replace(/[.*+?^${}()|[\]\\]/g, '\\\$&');
-        }
-        
-        // Initialize: Load index first, then check for URL query
-        (async function() {
-            await loadIndex();
-            
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlQuery = urlParams.get('q');
-            if (urlQuery) {
-                document.getElementById('ss-search-input').value = urlQuery;
-                performSearch();
-            }
-        })();
+        });
     </script>
     
-    <!-- Theme scripts for newsticker -->
-    <script src="../wp-content/themes/wp-masjid/wm-script/acmeticker.min.js?ver=6.9"></script>
+    <!-- Acmeticker for running text -->
+    <script type="text/javascript" src="../wp-content/themes/wp-masjid/wm-script/acmeticker.min.js"></script>
     <script>
         jQuery(document).ready(function($) {
-            if ($.fn.AcmeTicker) {
-                $('.newstickers').AcmeTicker({ 
-                    type: 'marquee',
-                    direction: 'left',
-                    speed: 0.05,
+            if ($.fn.acmeticker) {
+                $('.newstickers').acmeticker({ 
+                    speed: 50, 
+                    delay: 2000, 
                     pauseOnHover: true
                 });
             }
         });
     </script>
 </body>
+
 </html>

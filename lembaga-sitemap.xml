@@ -2,7 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>./lembaga/</loc>
-		<lastmod>2026-02-13T06:51:51+00:00</lastmod>
+		<lastmod>2026-02-14T09:03:44+00:00</lastmod>
+	</url>
+	<url>
+		<loc>./lembaga/tpa-al-quran/</loc>
+		<lastmod>2026-02-14T09:03:44+00:00</lastmod>
 	</url>
 	<url>
 		<loc>./lembaga/profil-taman-pendidikan-al-quran-tpa-tpq-masjid-al-jihad-mulia-serpong/</loc>
