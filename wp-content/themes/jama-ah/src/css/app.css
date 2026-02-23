@@ -2394,13 +2394,7 @@
     @apply font-medium text-gray-700 text-base hover:text-green-700;
 }
 
-/* Make grid columns wider globally */
-[class*="grid-cols-2"],
-[class*="grid-cols-3"],
-[class*="grid-cols-4"] {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-}
-
+/* Make blog grid columns wider */
 .blog-grid {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
 }
@@ -2456,9 +2450,7 @@
 }
 
 .wm-section--light {
-    @apply bg-white;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, transparent 20%, #f59e0b 50%, transparent 80%) 1;
+    /* Transparent — inherits parent background */
 }
 
 .wm-section--dark {

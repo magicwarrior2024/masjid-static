@@ -289,7 +289,7 @@ html :where(.is-position-sticky){
 
 <link rel="stylesheet" id="mosque-tw-fonts-css" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" media="all">
 <link rel="stylesheet" id="mosque-tw-style-css" href="./../../wp-content/themes/jama-ah/style.css?ver=1.0.0" media="all">
-<link rel="stylesheet" id="mosque-tw-tailwind-css" href="./../../wp-content/themes/jama-ah/dist/output.css?ver=1771757452" media="all">
+<link rel="stylesheet" id="mosque-tw-tailwind-css" href="./../../wp-content/themes/jama-ah/dist/output.css?ver=1771801727" media="all">
 <link rel="stylesheet" id="web-inter-css" href="https://fonts.googleapis.com/css2?family=Inter%3Awght%40300%3B400%3B500%3B600%3B700&amp;display=swap&amp;ver=6.9.1" media="all">
 <link rel="stylesheet" id="web-playfair-css" href="https://fonts.googleapis.com/css2?family=Playfair+Display%3Awght%40400%3B500%3B600%3B700%3B800&amp;display=swap&amp;ver=6.9.1" media="all">
 <style type="text/css">        .khalifah .MPtimetable tr:nth-child(2) td:nth-child(1):before,
@@ -468,7 +468,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 	<li id="menu-item-935" class="menu-item menu-item-type-post_type_archive menu-item-object-layanan menu-item-935"><a href="./../../layanan/">Layanan</a></li>
 	<li id="menu-item-571" class="menu-item menu-item-type-post_type_archive menu-item-object-pengumuman menu-item-571"><a href="./../../pengumuman/">Pengumuman</a></li>
 	<li id="menu-item-575" class="menu-item menu-item-type-post_type_archive menu-item-object-wakaf menu-item-575"><a href="./../../wakaf/">Laporan Wakaf</a></li>
-	<li id="menu-item-576" class="menu-item menu-item-type-post_type_archive menu-item-object-lembaga menu-item-576"><a href="./../../lembaga/">Lembaga</a></li>
 	<li id="menu-item-936" class="menu-item menu-item-type-post_type_archive menu-item-object-takmir menu-item-936"><a href="./../../takmir/">Takmir</a></li>
 </ul>
 </li>
@@ -508,7 +507,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 	<li class="menu-item menu-item-type-post_type_archive menu-item-object-layanan menu-item-935"><a href="./../../layanan/">Layanan</a></li>
 	<li class="menu-item menu-item-type-post_type_archive menu-item-object-pengumuman menu-item-571"><a href="./../../pengumuman/">Pengumuman</a></li>
 	<li class="menu-item menu-item-type-post_type_archive menu-item-object-wakaf menu-item-575"><a href="./../../wakaf/">Laporan Wakaf</a></li>
-	<li class="menu-item menu-item-type-post_type_archive menu-item-object-lembaga menu-item-576"><a href="./../../lembaga/">Lembaga</a></li>
 	<li class="menu-item menu-item-type-post_type_archive menu-item-object-takmir menu-item-936"><a href="./../../takmir/">Takmir</a></li>
 </ul>
 </li>
@@ -812,6 +810,37 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 <script src="./../../wp-content/themes/jama-ah/src/js/slider.js?ver=1.0.0" id="mosque-tw-slider-js"></script>
 <script src="./../../wp-content/themes/jama-ah/src/js/app.js?ver=1.0.0" id="mosque-tw-app-js"></script>
 
+<!-- Client-Side Event Expiration: Hide past events on static site -->
+<script>
+(function() {
+    var now = Math.floor(Date.now() / 1000); // Current time in Unix seconds
+    var offset = 7; // Server timezone offset
+    // Adjust 'now' to match the server timezone used when generating timestamps
+    var serverNow = now + (offset * 3600) - (new Date().getTimezoneOffset() * 60);
+    
+    var events = document.querySelectorAll('[data-event-timestamp]');
+    var hiddenCount = 0;
+    events.forEach(function(el) {
+        var ts = parseInt(el.getAttribute('data-event-timestamp'), 10);
+        if (!isNaN(ts) && ts < serverNow) {
+            el.style.display = 'none';
+            hiddenCount++;
+        }
+    });
+
+    // If on the event archive and ALL events are hidden, show a "no events" message
+    if (hiddenCount > 0 && hiddenCount === events.length) {
+        var container = document.querySelector('.space-y-4.max-w-4xl');
+        if (container) {
+            container.innerHTML = '<div class="text-center py-20 bg-gray-50 rounded-xl border border-gray-100">' +
+                '<h3 class="text-2xl font-serif text-gray-800 mb-2">Belum Ada Event Mendatang</h3>' +
+                '<p class="text-gray-500">Tidak ada event yang dijadwalkan saat ini. Silakan kunjungi kembali nanti.</p>' +
+                '</div>';
+        }
+    }
+})();
+</script>
+
 <div id="ss-wpm-search-modal" class="ss-wpm-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title" style="display: none;"><div class="ss-wpm-modal-content"><div class="ss-wpm-modal-header"><h2 id="search-modal-title">Search</h2><button class="ss-wpm-close-button" aria-label="Close search modal" type="button">×</button></div><div class="ss-wpm-modal-body"><input type="text" id="ss-wpm-search-input" placeholder="Search articles, pages, and content..." aria-describedby="search-results" autocomplete="off"><div id="ss-wpm-search-results" role="region" aria-live="polite" aria-label="Search results"></div></div></div></div><script src="../../wp-content/plugins/masjid-static/assets/js/search-logic.js" type="text/javascript"></script><script>
                 // Global search redirect function
                 function ssWpmSearchRedirect(form) {
@@ -877,5 +906,5 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
 
                 });
-                </script><!-- MASJID_STATIC Debug: Search assets injection completed for: .//blog/7-metode-rasulullah-mendidik-anak-laki-laki-menjadi-pemimpin-tangguh/ --></body>
+                </script></body>
 </html>
