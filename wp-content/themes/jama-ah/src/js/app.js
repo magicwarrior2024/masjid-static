@@ -12,3 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Search Modal Toggle (if present in header)
     // Handled via inline onclick in header.php currently, could move here.
 });
+
+
+
+

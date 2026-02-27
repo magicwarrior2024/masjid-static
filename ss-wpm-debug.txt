@@ -1,4 +1,4 @@
-Start Copy: 2026-02-23 07:41:00
+Start Copy: 2026-02-27 00:52:00
 Destination: C:\xampplite\www\mosque\html
 Theme Dir: C:\xampplite\www\mosque/wp-content/themes/jama-ah
 Source font dir missing

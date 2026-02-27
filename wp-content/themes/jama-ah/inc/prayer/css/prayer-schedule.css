@@ -31,8 +31,8 @@
 }
 
 .wm-prayer-table th {
-    background: #1d7a50;
-    color: #fff;
+    background: #9b2c3a !important;
+    color: #fff !important;
     padding: 10px 8px;
     text-align: center;
     font-weight: 600;
@@ -49,7 +49,7 @@
 }
 
 .wm-prayer-table tbody tr:hover {
-    background: #f0faf5;
+    background: #fff5f6;
 }
 
 .wm-prayer-table tbody tr:nth-child(even) {
@@ -57,27 +57,27 @@
 }
 
 .wm-prayer-table tbody tr:nth-child(even):hover {
-    background: #f0faf5;
+    background: #fff5f6;
 }
 
 .wm-prayer-today {
-    background: #e8f5e9 !important;
+    background: #ffebee !important;
     font-weight: 700;
 }
 
 .wm-prayer-today td {
-    border-bottom: 2px solid #1d7a50;
+    border-bottom: 2px solid #9b2c3a;
 }
 
 /* -- Daily Widget -- */
 .wm-prayer-daily {
-    background: linear-gradient(135deg, #1a5632 0%, #2d8a5e 100%);
+    background: linear-gradient(135deg, #7a222e 0%, #b73546 100%);
     border-radius: 12px;
     padding: 24px;
     color: #fff;
     max-width: 600px;
     margin: 16px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .wm-prayer-daily-header {
@@ -93,7 +93,7 @@
 }
 
 .wm-prayer-daily .wm-prayer-method {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
     margin: 0;
 }
@@ -105,7 +105,7 @@
 }
 
 .wm-prayer-daily-item {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 12px 8px;
     text-align: center;
@@ -114,14 +114,14 @@
 }
 
 .wm-prayer-daily-item:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
 .wm-prayer-daily-item.wm-prayer-next {
-    background: rgba(255,255,255,0.25);
-    border: 2px solid rgba(255,255,255,0.5);
-    box-shadow: 0 0 12px rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
 }
 
 .wm-prayer-icon {
@@ -149,7 +149,7 @@
 .wm-prayer-next-badge {
     display: inline-block;
     background: #ffd700;
-    color: #1a5632;
+    color: #7a222e;
     font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
@@ -183,8 +183,8 @@
 .wm-prayer-nav-btn {
     display: inline-block;
     padding: 6px 16px;
-    background: #1d7a50;
-    color: #fff;
+    background: #9b2c3a;
+    color: #fff !important;
     text-decoration: none;
     border-radius: 6px;
     font-size: 13px;
@@ -192,7 +192,7 @@
 }
 
 .wm-prayer-nav-btn:hover {
-    background: #155a3c;
+    background: #7a222e;
     color: #fff;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .wm-prayer-imsakiyah-header {
-    background: linear-gradient(135deg, #1a3a2a 0%, #2d6b4a 100%);
+    background: linear-gradient(135deg, #7a222e 0%, #b73546 100%);
     color: #fff;
     padding: 24px;
     border-radius: 12px 12px 0 0;
@@ -216,12 +216,12 @@
 }
 
 .wm-prayer-imsakiyah-header .wm-prayer-method {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     margin: 0;
 }
 
 .wm-prayer-imsakiyah-table th {
-    background: #0f4a2d;
+    background: #5e1a23;
 }
 
 .wm-imsak-cell {
@@ -306,7 +306,7 @@
 }
 
 .wm-btn-print {
-    background: #1d7a50;
+    background: #9b2c3a;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -317,7 +317,7 @@
 }
 
 .wm-btn-print:hover {
-    background: #155a3c;
+    background: #7a222e;
 }
 
 /* -- Print Styles -- */

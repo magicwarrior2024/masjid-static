@@ -5,7 +5,19 @@ module.exports = {
         "./src/**/*.js"
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: 'rgb(var(--color-primary) / <alpha-value>)',
+                secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+            },
+            fontFamily: {
+                heading: ['var(--font-heading)', 'serif'],
+                body: ['var(--font-body)', 'sans-serif'],
+            },
+            borderRadius: {
+                global: 'var(--base-radius)',
+            }
+        },
     },
     plugins: [],
 }
